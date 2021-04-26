@@ -291,6 +291,11 @@
         margin-right: 48px;
       }
 
+      .header .button-group .contact-us {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+      }
+
       .section {
         padding: 8vw;
       }
@@ -412,6 +417,7 @@
       #attractive-design.section .bg-container {
         background: #e7ebf3;
         border-radius: 30px;
+        line-height: 0;
       }
 
       #attractive-design.section h1 {
@@ -420,6 +426,7 @@
         font-size: 48px;
         font-weight: 700;
         color: #000;
+        line-height: 1.2;
       }
 
       #attractive-design.section .text {
@@ -583,14 +590,23 @@
 
       #success-stories.section {
         background-color: #000;
+      }
+
+      #success-stories .page-container {
+        max-width: 1440px;
         background-image: url(./assets/multiple-device.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right;
+        min-height: 1024px;
+        margin: auto;
+      }
+
+      #success-stories .section-wrapper {
+        padding-top: 236px;
       }
 
       #success-stories.section h1 {
-        margin-top: 84px;
         color: #fff;
       }
 
@@ -641,15 +657,13 @@
       }
 
       #client-say.section .client-dialog {
-        margin-right: 40px;
+        margin-top: 36px;
+        margin-left: 15px;
+        margin-right: 15px;
         flex: 1;
         padding: 42px;
         background: #121212;
         border-radius: 30px;
-      }
-
-      #client-say.section .client-dialog:last-child {
-        margin-right: 0px;
       }
 
       #client-say.section .client-dialog .quote {
@@ -659,6 +673,7 @@
 
       #client-say.section .client-dialog .content {
         color: #a1a1a6;
+        font-family: "Roboto", sans-serif;
         font-size: 19px;
         line-height: 25px;
         font-weight: 500;
@@ -676,6 +691,7 @@
 
       #client-say.section .client-dialog .client-name {
         color: #4b4b4b;
+        font-family: "Roboto", sans-serif;
         font-size: 15px;
         font-weight: 500;
       }
@@ -692,8 +708,11 @@
         background-color: #f2f2f2;
       }
 
+      #contact-form.section .left-col {
+        padding: 0px 14px;
+      }
+
       #contact-form.section h1 {
-        margin-top: 84px;
         font-weight: 700;
       }
 
@@ -714,11 +733,13 @@
         display: block;
         width: 100%;
         margin-top: 15px;
+        background-color: #f2f2f2;
       }
 
       #contact-form.section .input-form textarea {
         width: 100%;
         margin-top: 15px;
+        background-color: #f2f2f2;
       }
 
       /* footer */
@@ -854,15 +875,6 @@
           font-size: 16px;
         }
 
-        #client-say.section .client-dialog {
-          margin: 0;
-          margin-top: 36px;
-        }
-
-        #client-say.section .client-dialog:first-child {
-          margin-top: 0;
-        }
-
         #client-say.section .client-dialog .client-logo {
           margin-top: 50px;
         }
@@ -892,7 +904,7 @@
       </div>
       <div class="button-group">
         <a href="#" class="iam-editor">IAM EDITORS</a>
-        <a href="#" class="button">CONTACT US</a>
+        <a href="#" class="button contact-us">CONTACT US</a>
       </div>
     </div>
     <div id="heading" class="section">
@@ -1002,7 +1014,7 @@
       <div id="software" class="section">
         <div class="bg-container">
           <div class="left-col">
-            <img src="./assets/macbook.png" alt="macbook" />
+            <img src="./assets/laptop.png" alt="laptop" />
           </div>
 
           <div class="right-col">
@@ -1070,23 +1082,27 @@
     </div>
 
     <div id="success-stories" class="section">
-      <h1>Success Stories</h1>
-      <div class="text">
-        It was created based on simple B2B and<br />
-        optimized designed. Look over the real<br />
-        use-case of the In-App Message designed<br />
-        by IAM Studio.
-      </div>
-      <a href="#" class="detail">
-        <div class="detail-wrapper">
-          Detail
-          <img
-            class="carret-right"
-            src="./assets/caret-right-white.png"
-            alt="carret right"
-          />
+      <div class="page-container">
+        <div class="section-wrapper">
+          <h1>Success Stories</h1>
+          <div class="text">
+            It was created based on simple B2B and<br />
+            optimized designed. Look over the real<br />
+            use-case of the In-App Message designed<br />
+            by IAM Studio.
+          </div>
+          <a href="#" class="detail">
+            <div class="detail-wrapper">
+              Detail
+              <img
+                class="carret-right"
+                src="./assets/caret-right-white.png"
+                alt="carret right"
+              />
+            </div>
+          </a>
         </div>
-      </a>
+      </div>
     </div>
 
     <div id="client-say" class="section">
@@ -1139,11 +1155,15 @@
 
     <div id="contact-form" class="section">
       <div class="left-col">
-        <h1>Find how can us give a helps</h1>
+        <h1>
+          Find how can us<br />
+          give a helps
+        </h1>
         <div class="text">
           Let's make something amazing together.<br />
-          If you'd like to learn more about working with us or want to see how
-          we can help, please complete the form.
+          If you'd like to learn more about working with us <br />
+          or want to see how we can help, please<br />
+          complete the form.
         </div>
       </div>
       <div class="right-col">

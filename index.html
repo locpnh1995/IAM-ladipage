@@ -137,7 +137,8 @@
       }
 
       /* GENERAL */
-      .animation-element {
+      .animation-element,
+      .animation-element-active {
         position: relative;
         bottom: 0;
         opacity: 0;
@@ -161,7 +162,7 @@
       }
 
       html {
-        font-size: 15px;
+        font-size: calc(12px + 0.21vw);
         font-family: "Archivo", sans-serif;
         box-sizing: border-box;
       }
@@ -187,8 +188,12 @@
         max-height: 570px;
       }
 
-      img#product-img {
-        max-height: 570px;
+      img#product-small-img {
+        max-height: 280px;
+      }
+
+      img#product-big-img {
+        max-height: 458px;
       }
 
       img#smart-phone-img {
@@ -222,7 +227,7 @@
         padding: 14px 20px;
         color: #232323;
         border: 1px solid #a1a1a6;
-        font-size: 15px;
+        font-size: calc(12px + 0.21vw);
         font-family: "Roboto", sans-serif;
         font-weight: 500;
         border-radius: 9px;
@@ -268,7 +273,8 @@
 
       textarea {
         padding: 14px 20px;
-        font-size: 15px;
+        font-size: calc(12px + 0.21vw);
+        font-weight: 500;
         font-family: "Roboto", sans-serif;
         border: 1px solid #a1a1a6;
         border-radius: 9px;
@@ -289,7 +295,7 @@
         display: flex;
         align-items: center;
         color: #fff;
-        font-size: 20px;
+        font-size: calc(12px + 0.42vw);
         font-weight: 700;
       }
 
@@ -331,17 +337,17 @@
       }
 
       .section h1 {
-        font-size: 60px;
+        font-size: calc(18px + 2.2vw);
         font-weight: 700;
       }
 
       .section .text {
-        font-size: 18px;
-        line-height: 30px;
+        font-size: calc(12px + 0.42vw);
+        line-height: 1.7;
       }
 
       .section .title {
-        font-size: 16px;
+        font-size: calc(12px + 0.21vw);
       }
 
       .section .left-col {
@@ -359,20 +365,19 @@
       }
 
       .section#heading h2 {
-        font-size: 21px;
+        font-size: calc(12px + 0.48vw);
         font-weight: 700;
       }
 
       .section#heading h1 {
-        font-size: 90px;
+        font-size: 4.7vw;
         font-weight: 700;
         margin-top: 12px;
       }
 
       .section#heading .text {
         margin-top: 36px;
-        font-size: 21px;
-        line-height: 32px;
+        font-size: calc(12px + 0.7vw);
         color: #c9c9cb;
       }
 
@@ -380,7 +385,7 @@
         display: inline-block;
         margin-top: 61px;
         padding: 18px 48px;
-        font-size: 20px;
+        font-size: calc(12px + 0.42vw);
       }
 
       /* specialities */
@@ -428,8 +433,6 @@
       #personal-targeting.section .text {
         margin-top: 42px;
         color: #4e4e4e;
-        font-size: 19px;
-        line-height: 30px;
         font-family: "Roboto", sans-serif;
       }
 
@@ -453,7 +456,6 @@
       #attractive-design.section h1 {
         display: inline-block;
         margin-top: 72px;
-        font-size: 48px;
         font-weight: 700;
         color: #000;
         line-height: 1.2;
@@ -466,7 +468,7 @@
       }
 
       #attractive-design.section img {
-        margin-top: 70px;
+        margin-top: 64px;
       }
 
       /* advance-technique */
@@ -490,6 +492,22 @@
       #advance-technique.section .image-wrapper {
         margin-top: 66px;
         text-align: right;
+      }
+
+      #advance-technique.section .image-wrapper .image-container {
+        display: inline-block;
+        position: relative;
+        margin-left: 120px;
+        margin-bottom: 60px;
+      }
+
+      #advance-technique.section
+        .image-wrapper
+        .image-container
+        #product-small-img {
+        position: absolute;
+        left: -76px;
+        bottom: -22px;
       }
 
       /* app-software */
@@ -572,7 +590,7 @@
 
       #briefly.section .question {
         font-weight: 600;
-        font-size: 27px;
+        font-size: calc(14px + 0.68vw);
       }
 
       #briefly.section .input-wrapper {
@@ -608,7 +626,7 @@
       #briefly.section #index-indicator {
         margin-top: 36px;
         font-weight: 500;
-        font-family: "Roboto" sans-serif;
+        font-family: "Roboto", sans-serif;
       }
 
       #briefly.section .button.next {
@@ -697,15 +715,15 @@
       }
 
       #client-say.section .client-dialog .quote {
-        font-size: 41px;
+        font-size: calc(14px + 0.5vw);
         font-weight: 700;
       }
 
       #client-say.section .client-dialog .content {
         color: #a1a1a6;
         font-family: "Roboto", sans-serif;
-        font-size: 19px;
-        line-height: 25px;
+        font-size: calc(12px + 0.42vw);
+        line-height: 1.7;
         font-weight: 500;
       }
 
@@ -722,7 +740,7 @@
       #client-say.section .client-dialog .client-name {
         color: #4b4b4b;
         font-family: "Roboto", sans-serif;
-        font-size: 15px;
+        font-size: calc(12px + 0.22vw);
         font-weight: 500;
       }
 
@@ -939,14 +957,16 @@
       </div>
     </div>
     <div id="heading" class="section">
-      <h2 class="animation-element">Make it easily and attractive</h2>
-      <h1 class="animation-element">
-        Improve a user<br />
-        engagement with IAM
-      </h1>
-      <div class="text animation-element">
-        <p>Customize your In-App Message and increase user engagement.</p>
-        <p>Variety of designs and iam codes will be provide to you.</p>
+      <div class="text-wrapper animation-element">
+        <h2>Make it easily and attractive</h2>
+        <h1>
+          Improve a user<br />
+          engagement with IAM
+        </h1>
+        <div class="text">
+          <p>Customize your In-App Message and increase user engagement.</p>
+          <p>Variety of designs and iam codes will be provide to you.</p>
+        </div>
       </div>
       <a href="#" class="button start-iam">Start IAM Editor</a>
     </div>
@@ -1013,8 +1033,25 @@
         Message can reach out from our Dashboard.<br />
       </div>
 
-      <div class="image-wrapper animation-element">
-        <img id="product-img" src="./assets/product.png" alt="product big" />
+      <div class="image-wrapper">
+        <div class="image-container">
+          <img
+            class="animation-element-active"
+            id="product-big-img"
+            src="./assets/product-big.png"
+            alt="product big"
+          />
+          <div
+            id="animation-product-small-wrapper"
+            class="animation-wrapper animation-element-active"
+          >
+            <img
+              id="product-small-img"
+              src="./assets/product-small.png"
+              alt="product big"
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1363,6 +1400,25 @@
               ) {
                 animationElements[i].classList.add("animation-fade-in");
               }
+            }
+          }
+
+          // DO ANIMATION FOR PRODUCT IMAGES
+          let productBig = document.getElementById("product-big-img");
+          let productSmallWrapper = document.getElementById(
+            "animation-product-small-wrapper"
+          );
+          if (productBig && productSmallWrapper) {
+            let imageProductBigTopPos = productBig.getBoundingClientRect().top;
+
+            if (
+              imageProductBigTopPos < 500 &&
+              !productBig.classList.contains("animation-fade-in")
+            ) {
+              productBig.classList.add("animation-fade-in");
+              setTimeout(() => {
+                productSmallWrapper.classList.add("animation-fade-in");
+              }, 1500);
             }
           }
         }
